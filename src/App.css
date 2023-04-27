@@ -10,3 +10,8 @@
   border: 1px dotted blue;
   color: white;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
