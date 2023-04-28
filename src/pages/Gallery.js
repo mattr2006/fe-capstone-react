@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import MovieCard from "../components/MovieCard";
 import FooterComp from "../components/FooterComp";
+import "../components/FooterStyle.css";
+import "../App.css";
 
 export default function Gallery() {
   const [data, setData] = useState(null);
@@ -31,21 +33,21 @@ export default function Gallery() {
       <div className="main-heading">
         <h1>Show Gallery</h1>
       </div>
-      <div>
+      <div className="form-wrapper">
         <form onSubmit={handleSubmit}>
           <input type="text" value={input} onChange={handleInputChange} />
           <button type="submit">Fetch Data</button>
         </form>
         {data ? (
-          <div>
+          <div className="show-wrapper">
             <h1>Fetched Shows</h1>
-            <MovieCard data={data} />;
+            <MovieCard data={data} />
           </div>
         ) : (
           <p>No data fetched yet.</p>
         )}
+        <FooterComp />
       </div>
-      <FooterComp />
     </div>
   );
 }

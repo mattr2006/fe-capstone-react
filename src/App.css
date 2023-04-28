@@ -1,17 +1,113 @@
 .App {
+  height: 100%;
+  width: 100%;
   text-align: center;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  background-color: black;
-  padding: 15px;
-  border: 1px dotted blue;
-  color: white;
+form {
+  padding: 2%;
 }
 
+hr {
+  display: flex;
+  justify-content: center;
+
+  margin: 0 20% 0 20%;
+}
+
+h1 {
+  margin: 0;
+  padding: 2%;
+}
+
+h3 {
+  margin: 0;
+}
+
+.sign-off-wrapper {
+  padding-bottom: 10%;
+}
+
+.navbar,
 a {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: darkslategrey;
+
+  box-shadow: 5x;
+  text-decoration: none;
+}
+
+.form-wrapper {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navbar .link-wrapper a {
+  display: flex;
+  background-color: darkslategray;
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  padding: 15px;
+}
+
+.navbar a:hover {
   color: inherit;
   text-decoration: none;
+  border-radius: 5%;
+  background-color: grey;
+}
+
+.image-container a {
+  color: black;
+  text-decoration: underline;
+
+  background-color: gray;
+}
+
+.link-wrapper a {
+  background-color: white;
+}
+
+.show-wrapper {
+  height: 100%;
+}
+
+.main-content-wrapper {
+  height: 100%;
+}
+.image-container-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  padding-bottom: 10%;
+}
+
+.image-container img {
+  border-radius: 7% 7%;
+}
+
+.image-wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 15px;
+  border: 1px dotted black;
+}
+
+.content-wrapper {
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+.content-wrapper a {
+  background-color: black;
+}
+
+.main-header {
+  padding-bottom: 2%;
 }
