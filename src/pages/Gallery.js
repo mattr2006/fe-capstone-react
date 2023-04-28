@@ -44,10 +44,12 @@ export default function Gallery() {
             <MovieCard data={data} />
           </div>
         ) : (
-          <p>No data fetched yet.</p>
+          <div className="noDataResponse">
+            <h3>No data fetched yet.</h3>
+          </div>
         )}
-        <FooterComp />
       </div>
+      <FooterComp />
     </div>
   );
 }
