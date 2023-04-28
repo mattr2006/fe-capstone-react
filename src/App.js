@@ -6,24 +6,20 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
-import ShowPage from "./pages/Show-Page";
 
 function App() {
   return (
     <div className="App">
       <div className="links-wrapper">
         <nav className="navbar">
-          <div classname="link-wrapper">
+          <div className="link-wrapper">
             <a href="/home">Home</a>
           </div>
-          <div classname="link-wrapper">
+          <div className="link-wrapper">
             <a href="/about">About</a>
           </div>
-          <div classname="link-wrapper">
+          <div className="link-wrapper">
             <a href="/gallery">Gallery</a>
-          </div>
-          <div classname="link-wrapper">
-            <a href="/showpage">Show Page</a>
           </div>
         </nav>
 
@@ -41,11 +37,6 @@ function App() {
           <Switch>
             <Route path="/gallery">
               <Gallery />
-            </Route>
-          </Switch>
-          <Switch>
-            <Route path="/showpage">
-              <ShowPage />
             </Route>
           </Switch>
         </BrowserRouter>

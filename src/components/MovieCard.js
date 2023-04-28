@@ -1,13 +1,17 @@
 import React from "react";
 
-const MovieCard = ({ status, image }) => {
+const MovieCard = (props) => {
   return (
-    <div className="Movie-Card-Wrapper">
-      <img src={image} alt="Movie Img" />
-      <div>
-        <h1>{status}</h1>
-      </div>
-    </div>
+    <>
+      {props.data.map((movie, index) => (
+        <div className="image-container">
+          <img src={movie.show.image.medium} alt="movie"></img>
+          <div>
+            <a href={movie.show.url}>Show Link</a>
+          </div>
+        </div>
+      ))}
+    </>
   );
 };
 

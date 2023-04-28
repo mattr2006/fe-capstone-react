@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MovieCard from "../components/MovieCard";
+import FooterComp from "../components/FooterComp";
 
 export default function Gallery() {
   const [data, setData] = useState(null);
@@ -23,6 +24,7 @@ export default function Gallery() {
     e.preventDefault();
     fetchApiData(input);
   };
+  console.log(data);
 
   return (
     <div className="main-content-wrapper">
@@ -37,16 +39,13 @@ export default function Gallery() {
         {data ? (
           <div>
             <h1>Fetched Shows</h1>
-            <pre>{JSON.stringify(data, null, 1)}</pre>
+            <MovieCard data={data} />;
           </div>
         ) : (
           <p>No data fetched yet.</p>
         )}
       </div>
+      <FooterComp />
     </div>
   );
 }
-
-// {MovieCard((movie, index) => {
-//   return <MovieCard key={index} {...movie} />;
-// })}
